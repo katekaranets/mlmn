@@ -1,10 +1,21 @@
-.header-navigation {    
- 
-    display: flex;
-    
+@import './scss/reset.scss';
+@import './scss/general.scss';
+@import './scss/constants.scss';
+
+
+.App {
+    height: 100%;
+}
+
+.header-navigation { 
+    display: flex;    
 
     li {
         list-style-type: none;
         margin: 0 20px;
+
+        a{
+            color: $links-color;
+        }
     }
 }

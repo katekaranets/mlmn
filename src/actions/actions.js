@@ -1,11 +1,10 @@
-import fetch from 'cross-fetch';
+export const SET_TEAM_NAME = 'SET_TEAM_NAME';
 
-export const SELECT_SUBREDDIT = 'SELECT_SUBREDDIT';
-
-​
-export function selectSubreddit(subreddit) {
-  return {
-    type: SELECT_SUBREDDIT,
-    subreddit
-  }
+export function setTeamName(id, name) {
+    return {
+      type: SET_TEAM_NAME,
+      id,
+      name
+    }
 }
+

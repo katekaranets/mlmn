@@ -1,17 +1,23 @@
 import { combineReducers } from 'redux';
-import { SELECT_SUBREDDIT } from './actions'
+import { SET_TEAM_NAME } from '../actions/actions';
 
-function selectedSubreddit(state = 'reactjs', action) {
+
+function teams(state = [], action) {
     switch (action.type) {
-      case SELECT_SUBREDDIT:
-        return action.subreddit
-      default:
-        return state
+        case SET_TEAM_NAME:
+            return state.map(team => {
+                if (team.id === action.id) {
+                    team.name = action.name;
+                }
+                return team
+            })
+        default:
+            return state
     }
-  }
-​
-const rootReducer =  combineReducers({
-    selectedSubreddit
+}
+
+const rootReducer = combineReducers({
+    teams
 })
 
 export default rootReducer
