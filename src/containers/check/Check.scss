@@ -10,40 +10,26 @@
 
 }
 
-.team {
+.teamEdit {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: 10px 0;
 
     input {
+        width: 600px;
         height: 40px;
-        font-size: 32px;
+        background: transparent;
         border: none;
-        outline: 1px $button-color solid;
-        
-        &:active, &:focus{
-            box-shadow: 0 0 10px 0 $button-color inset, 0 0 10px 4px $button-color;
-        }
-
-
-        &[type="text"]{
-            width: 300px;
-        }
-
-        &[type="checkbox"]{
-            width: 40px;
-
-            &:checked {
-                box-shadow: 0 0 10px 0 $button-color inset, 0 0 10px 4px $button-color;
-            }
-        }
-    }
-
-    label {
+        border-bottom: 1px solid $button-color;
+        font-size: 32px;
         color: $button-color;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0 20px;
+        padding: 5px;
+
+        &:active, &:focus{
+            outline-color: $button-color;
+        }
     }
+
 }

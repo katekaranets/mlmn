@@ -22,7 +22,7 @@ class Check extends Component  {
         }
         <div className="">
           <Link to="/tour">
-            <button className="btn start">Start game</button>
+            <button className="btn start">Начать игру</button>
           </Link>
         </div>    
       </div>

@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
-import { SET_TEAM_NAME } from '../actions/actions';
-
+import { SET_TEAM_NAME, UPDATE_SCORE } from '../actions/actions';
 
 function teams(state = [], action) {
     switch (action.type) {
@@ -8,6 +7,13 @@ function teams(state = [], action) {
             return state.map(team => {
                 if (team.id === action.id) {
                     team.name = action.name;
+                }
+                return team
+            })
+        case UPDATE_SCORE:
+            return state.map(team => {
+                if (team.id === action.id) {
+                    team.score = action.score;
                 }
                 return team
             })
