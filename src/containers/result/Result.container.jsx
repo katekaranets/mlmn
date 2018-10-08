@@ -5,26 +5,21 @@ import { connect } from 'react-redux'
 
 class Result extends Component {
 
+    getSortedTeam(teams) {
+        return teams.sort((a, b) => +b.score - +a.score)
+    }
+
 
     render() {
         const teams = this.props.teams;
         return (
             <div className="resultsPage">
                 {
-                    teams.sort((a, b) => {
-                        if (b.score > a.score) {
-                            return 1
-                        }
-                        if (b.score < a.score) {
-                            return -1
-                        }
-                        return 0
-                    }).map((team) => {
+                    this.getSortedTeam(teams).map((team) => {
                         return <div>
                                 <span>{team.name}</span> <span>{team.score}</span>
                              </div>
                     })
-
                 }
             </div>
         );
