@@ -1,0 +1,35 @@
+@import '../../scss/constants.scss';
+@import '../../scss/general.scss';
+
+.checkPage{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.teamEdit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
+
+    input {
+        width: 600px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $button-color;
+        font-size: 32px;
+        color: $button-color;
+        padding: 5px;
+
+        &:active, &:focus{
+            outline-color: $button-color;
+        }
+    }
+
+}

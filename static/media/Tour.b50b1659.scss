@@ -1,0 +1,66 @@
+@import '../../scss/constants.scss';
+@import '../../scss/general.scss';
+
+.tourPage {
+    height: calc(100% - 40px);
+    padding: 20px;
+    position: relative;
+
+    .btn{
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+}
+
+.tourTable {
+
+    .category {
+        display: flex;
+        flex-direction: row;
+        background: white;
+
+        > * {
+            border: 1px solid black;
+            flex: 1;
+            padding: 10px 20px;
+        }
+    }
+}
+
+.tourScore {
+    height: 60px;
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+}
+
+.teamScore {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    label {
+        color: $button-color;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    input{
+        width: 200px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $button-color;
+        font-size: 30px;
+        color: $button-color;
+        padding: 5px;
+    
+        &:active, &:focus{
+            outline-color: $button-color;
+        }
+    }
+}
