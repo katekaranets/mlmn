@@ -1,7 +1,7 @@
 {
   "name": "mlmn-react",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://katekaranets.github.io/mlmn/",
   "dependencies": {
     "autoprefixer": "7.1.6",
